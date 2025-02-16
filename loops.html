@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1>LOOPS</h1> -->
+    <!-- <P>starting value, end value, condition, steps, code block</P> -->
+    <!-- <input type="number" name="" id=""> -->
+    <p id="screen"></p>
+    <script>
+        // for( let i=0; i <=5; i++){
+        //     prompt(i)
+        // }
+
+        // for(let i=1000; i >= 0; i--){
+        //     console.log(i);
+            
+        // }
+        // for(carton = 0; carton <= 20; carton++){
+        //     // console.log(`${carton} carton`);
+        //     if(carton >= 2){
+        //         console.log(`${carton} cartons`);
+        //     }
+        //     else{
+        //         console.log(`${carton} carton`);
+                
+        //     }
+        // }
+            
+            //    console.log(`${fanta} and biscuit`);
+            for(let fanta = 99; fanta >= 0; fanta--){
+                if (fanta >= 3) {
+                                 document.getElementById('screen').innerHTML += `<p>${fanta} bottles of fanta on the wall, ${fanta} bottles of fanta.
+                                   Take one down and pass it around, ${fanta - 1} bottles of fanta on the wall.</p>`
+                } 
+                else if(fanta == 2) {
+                         document.getElementById('screen').innerHTML += `<p>${fanta} bottles of fanta on the wall, ${fanta} bottles of fanta.
+                                   Take one down and pass it around, ${fanta - 1} bottle of fanta on the wall.</p>`
+                }
+                else if(fanta == 1){
+                     document.getElementById('screen').innerHTML += `<p>${fanta} bottle of fanta on the wall, ${fanta} bottle of fanta.
+                                   Take one down and pass it around,  no more bottles of fanta on the wall</p>`
+                }
+                else{
+                
+                    document.getElementById('screen').innerHTML += `<p>No more bottles of fanta on the wall, no more bottles of fanta.
+                            Go to the store and buy some more, 99 bottles of fanta on the wall.</p>`
+                    }
+            }
+    </script>
+</body>
+</html>

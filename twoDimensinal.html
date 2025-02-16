@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border:  1px solid;
+            border-collapse: collapse;
+        }
+        tr, td, tbody{
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <!-- <table>
+        <tr>
+            <th>name </th>
+            <th>class</th>
+            <th>rank</th>
+            <th>grade</th>
+        </tr>
+        <tbody>
+            <tr>
+                <td>sodiq</td>
+                <td>js lvl 1</td>
+                <td>3star</td>
+                <td>fair</td>
+            </tr>
+            <tr>
+                <td>sodiq</td>
+                <td>js lvl 1</td>
+                <td>3star</td>
+                <td>fair</td>
+            </tr>
+            <tr>
+                <td>sodiq</td>
+                <td>js lvl 1</td>
+                <td>3star</td>
+                <td>fair</td>
+            </tr>
+        </tbody>
+    </table> -->
+    <!-- <table border="1" style="border-collapse: collapse;">
+        <tr id="row"></tr>
+        <button onclick="bring()"> bring</button>
+    </table> -->
+            <select name="eval" id="eval">
+                <option value="+">+</option> 
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+            <button id="gen" onclick="gen()">generate</button>
+            <table>
+                <tbody>
+                 <tr>
+                    <td id="row"></td>
+                </tr>
+                </tbody>
+                   
+            </table>
+    <script>
+        // function bring(){
+        //     for(let pali = 1; pali <= 10; pali ++){
+        //         let palirow = `<td border= "1">`
+        //     for(let bisuit = 1; bisuit<= 10; bisuit++){
+        //         row.innerHTML += `${pali}  + ${bisuit}  = ${pali + bisuit} `;
+        //         palirow += `</td>`
+                
+        //     }
+        // }
+        //     row.innerHTML = palirow
+        // }
+        
+        function gen(){
+            // row.innerHTML = ''
+            let evaluation = document.getElementById('eval').value
+            for(let a = 1; a <= 10; a++){
+                 let tab = `<table>`
+                for(b = 1; b <= 10; b++){
+                   
+                    // tab.innerHTML += `${a + b}`;
+
+                    // console.log( `${a+b}`);
+                    tab.innerHTML = ''
+                    // tab += `</td>`
+                        tab += `<tr>`
+                    if (evaluation == "+"){
+
+                     tab += `<td>${a} + ${b} = ${a+b}</td>`
+                    }
+                  
+                    
+                    else if (evaluation == "-"){
+                       tab += `<td>${a} - ${b} = ${a-b}</td>`
+                    }
+                    else if (evaluation == "*"){
+                        tab += `<td>${a} x ${b} = ${a * b}</td>`
+                    }
+                  
+                    else{
+                        tab +=  `<td>${a} / ${b} =  ${a/b}<td>`
+                    }
+                   
+                
+                    
+                        tab += `</tr>`
+                        row.innerHTML   += tab
+                }
+            }            
+           
+              tab += `</table>`
+        }
+       
+       
+           
+    </script>
+</body>
+</html>
